@@ -70,4 +70,31 @@ public class GestorPalabrasTest {
         assertEquals("&%$", gp.invertirPalabra("$%&"));
         assertEquals(")(/", gp.invertirPalabra("/()"));
     }
+    //tests del metodo esPalindromo
+	@Test
+    public void esPalindromotestsuccess() {
+            GestorPalabras gestor = new GestorPalabras();
+        assertTrue(gestor.esPalindromo("Oso"));
+    }
+    @Test
+    public void esPalindromotestfailnotpalindromo() {
+            GestorPalabras gestor = new GestorPalabras();
+        assertTrue(gestor.esPalindromo("karpa"));
+    }
+    @Test
+    public void esPalindromotestfailnotletters() {
+            GestorPalabras gestor = new GestorPalabras();
+        assertTrue(gestor.esPalindromo("1|oso|1"));
+    }
+    @Test
+    public void esPalindromotestsuccessvariants() {
+            GestorPalabras gestor = new GestorPalabras();
+        assertTrue(gestor.esPalindromo("Úwü"));
+    }
+    @Test
+    public void esPalindromotestsuccessspaces() {
+            GestorPalabras gestor = new GestorPalabras();
+        assertTrue(gestor.esPalindromo("o so"));
+    }
+   
 }
