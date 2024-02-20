@@ -1,7 +1,8 @@
 package com.gestorpalabras;
 
 public class GestorPalabras {
-
+	
+	//FIXED by Leo_de_Torres
     public boolean esPalindromo(String palabra) {
         String palabraFormateada = palabra.replaceAll("\\s+", "").toLowerCase();
         palabraFormateada = palabraFormateada.replaceAll("á", "a");
